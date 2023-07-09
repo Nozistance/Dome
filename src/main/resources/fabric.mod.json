@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "rome",
+  "version": "${version}",
+  "name": "Rome",
+  "description": "Resources Outside Minecraft Environment",
+  "authors": [
+    "Nozistance"
+  ],
+  "contact": {
+    "issues": "https://github.com/Nozistance/Rome/issues",
+    "homepage": "https://modrinth.com/mod/rome",
+    "sources": "https://github.com/Nozistance/Rome"
+  },
+  "license": "BSD-3-Clause",
+  "icon": "assets/rome/rome.png",
+  "environment": "client",
+  "entrypoints": {
+    "modmenu": [
+      "io.nozistance.rome.gui.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "rome.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "*"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.nozistance.rome.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "pack.FileResourcePackProviderMixin",
+    "world.LevelSaveMixin",
+    "world.LevelStorageMixin",
+    "world.WorldEntryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
