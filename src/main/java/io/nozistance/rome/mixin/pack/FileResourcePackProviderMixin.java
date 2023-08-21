@@ -1,6 +1,6 @@
 package io.nozistance.rome.mixin.pack;
 
-import io.nozistance.rome.resource.pack.PackProvider;
+import io.nozistance.rome.data.pack.PackProvider;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import net.fabricmc.api.EnvType;
@@ -27,11 +27,11 @@ public class FileResourcePackProviderMixin {
     @Redirect(method = "register", at = @At(value = "INVOKE", target = "Lnet/minecraft/resource/FileResourcePackProvider;forEachProfile(Ljava/nio/file/Path;ZLjava/util/function/BiConsumer;)V"))
     private void register(Path packsDir, boolean alwaysStable, BiConsumer<Path, ResourcePackProfile.PackFactory> consumer) throws IOException {
         try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(packsDir)) {
-            List<Path> paths = new ArrayList<>(PackProvider.getRomeSources());
+            List<Path> paths = new ArrayList<>(PackProvider.getModEntries());
             for (Path path : directoryStream) paths.add(path);
             for (Path path : paths) {
                 ResourcePackProfile.PackFactory packFactory = FileResourcePackProvider.getFactory(path, alwaysStable);
-                path = Path.of(path.getFileName().toString() + (PackProvider.isFromRome(path) ? " (Rome)" : " (Local)"));
+                path = Path.of(path.getFileName().toString() + (PackProvider.isFromMod(path) ? " (Rome)" : " (Local)"));
                 if (packFactory != null) consumer.accept(path, packFactory);
             }
         }

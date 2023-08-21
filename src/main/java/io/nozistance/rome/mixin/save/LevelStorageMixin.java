@@ -1,6 +1,6 @@
-package io.nozistance.rome.mixin.world;
+package io.nozistance.rome.mixin.save;
 
-import io.nozistance.rome.resource.world.WorldSavesProvider;
+import io.nozistance.rome.data.save.SavesProvider;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.world.level.storage.LevelStorage;
@@ -18,7 +18,7 @@ public class LevelStorageMixin {
 
     @Inject(method = "getLevelList", at = @At("RETURN"), cancellable = true)
     private void getLevelList(@NotNull CallbackInfoReturnable<LevelStorage.LevelList> cir) {
-        List<LevelStorage.LevelSave> saves = WorldSavesProvider.getLevelSaves();
+        List<LevelStorage.LevelSave> saves = SavesProvider.getLevelSaves();
         cir.setReturnValue(new LevelStorage.LevelList(saves));
     }
 

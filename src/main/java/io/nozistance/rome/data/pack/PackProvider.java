@@ -1,4 +1,4 @@
-package io.nozistance.rome.resource.pack;
+package io.nozistance.rome.data.pack;
 
 import io.nozistance.rome.config.ModData;
 import io.nozistance.rome.config.Entry;
@@ -16,14 +16,14 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PackProvider {
 
-    public static List<Path> getRomeSources() {
+    public static List<Path> getModEntries() {
         return ModData.getPackEntries().stream().filter(Entry::isEnabled)
                 .map(Entry::getPath).map(Path::of).map(Path::toAbsolutePath)
                 .filter(Files::exists).toList();
     }
 
-    public static boolean isFromRome(@NotNull Path path) {
-        List<Path> saves = PackProvider.getRomeSources();
+    public static boolean isFromMod(@NotNull Path path) {
+        List<Path> saves = PackProvider.getModEntries();
         return saves.contains(path.toAbsolutePath());
     }
 

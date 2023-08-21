@@ -1,4 +1,4 @@
-package io.nozistance.rome.resource.world;
+package io.nozistance.rome.data.save;
 
 import io.nozistance.rome.config.ModData;
 import io.nozistance.rome.config.Entry;
@@ -22,7 +22,7 @@ import java.util.stream.Stream;
 @Slf4j
 @Environment(EnvType.CLIENT)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class WorldSavesProvider {
+public class SavesProvider {
 
     private static final Path SAVES_DIRECTORY = MinecraftClient
             .getInstance().getLevelStorage().getSavesDirectory();
@@ -31,7 +31,7 @@ public class WorldSavesProvider {
             l -> Files.isRegularFile(l.getLevelDatPath()) ||
                     Files.isRegularFile(l.getLevelDatOldPath());
 
-    public static List<Path> getLocalSources() {
+    public static List<Path> getLocalEntries() {
         try (Stream<Path> stream = Files.list(SAVES_DIRECTORY)) {
             return stream.toList();
         } catch (IOException e) {
@@ -40,7 +40,7 @@ public class WorldSavesProvider {
         }
     }
 
-    public static List<Path> getRomeSources() {
+    public static List<Path> getModEntries() {
         return ModData.getSaveEntries().stream().filter(Entry::isEnabled)
                 .map(Entry::getPath).map(Path::of).map(Path::toAbsolutePath)
                 .filter(Files::exists).toList();
@@ -48,15 +48,15 @@ public class WorldSavesProvider {
 
     public static List<LevelSave> getLevelSaves() {
         List<Path> saves = new ArrayList<>();
-        saves.addAll(WorldSavesProvider.getLocalSources());
-        saves.addAll(WorldSavesProvider.getRomeSources());
+        saves.addAll(SavesProvider.getLocalEntries());
+        saves.addAll(SavesProvider.getModEntries());
         return saves.stream().map(LevelSave::new)
-                .filter(WorldSavesProvider.isValidLevelSave)
+                .filter(SavesProvider.isValidLevelSave)
                 .toList();
     }
 
-    public static boolean isFromRome(String name) {
-        List<Path> saves = WorldSavesProvider.getRomeSources();
+    public static boolean isFromMod(String name) {
+        List<Path> saves = SavesProvider.getModEntries();
         return saves.contains(Path.of(name).toAbsolutePath());
     }
 

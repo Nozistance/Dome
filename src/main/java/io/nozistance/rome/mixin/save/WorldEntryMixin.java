@@ -1,6 +1,6 @@
-package io.nozistance.rome.mixin.world;
+package io.nozistance.rome.mixin.save;
 
-import io.nozistance.rome.resource.world.WorldSavesProvider;
+import io.nozistance.rome.data.save.SavesProvider;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.world.WorldListWidget;
@@ -25,7 +25,7 @@ public class WorldEntryMixin {
     @ModifyVariable(method = "render", at = @At("STORE"), ordinal = 0)
     public String getDisplayName(String name) {
         return level.getDisplayName() + " ("
-                + (WorldSavesProvider.isFromRome(level.getName())
+                + (SavesProvider.isFromMod(level.getName())
                 ? "Rome" : "Local") + ")";
     }
 

@@ -8,9 +8,9 @@
   "client": [
     "pack.FileResourcePackProviderMixin",
     "screenshot.ScreenshotRecorderMixin",
-    "world.LevelSaveMixin",
-    "world.LevelStorageMixin",
-    "world.WorldEntryMixin"
+    "save.LevelSaveMixin",
+    "save.LevelStorageMixin",
+    "save.WorldEntryMixin"
   ],
   "injectors": {
     "defaultRequire": 1
