@@ -7,6 +7,7 @@
   ],
   "client": [
     "pack.FileResourcePackProviderMixin",
+    "screenshot.ScreenshotRecorderMixin",
     "world.LevelSaveMixin",
     "world.LevelStorageMixin",
     "world.WorldEntryMixin"
