@@ -1,8 +1,13 @@
 {
-  "text.autoconfig.rome.option.Source": "Source",
-  "text.autoconfig.rome.option.Source.enabled": "Enabled",
-  "text.autoconfig.rome.option.Source.path": "Path",
-  "text.autoconfig.rome.option.worlds": "Worlds",
-  "text.autoconfig.rome.option.packs": "Resource/Data Packs",
+  "text.autoconfig.rome.category.packs": "Resource/Data Packs",
+  "text.autoconfig.rome.category.saves": "Saves",
+  "text.autoconfig.rome.category.screenshots": "Screenshots",
+  "text.autoconfig.rome.option.Entry": "Entry",
+  "text.autoconfig.rome.option.Entry.enabled": "Enabled",
+  "text.autoconfig.rome.option.Entry.path": "Path",
+  "text.autoconfig.rome.option.packs.packs": "Entries",
+  "text.autoconfig.rome.option.saves.saves": "Entries",
+  "text.autoconfig.rome.option.screenshots.screenshots.enabled": "Enabled",
+  "text.autoconfig.rome.option.screenshots.screenshots.path": "Path",
   "text.autoconfig.rome.title": "Rome"
 }

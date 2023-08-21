@@ -1,8 +1,13 @@
 {
-  "text.autoconfig.rome.option.Source": "Джерело",
-  "text.autoconfig.rome.option.Source.enabled": "Увімкнено",
-  "text.autoconfig.rome.option.Source.path": "Шлях",
-  "text.autoconfig.rome.option.worlds": "Світи",
-  "text.autoconfig.rome.option.packs": "Пакети ресурсів/данних",
+  "text.autoconfig.rome.category.packs": "Пакети Ресурсів/Даних",
+  "text.autoconfig.rome.category.saves": "Світи",
+  "text.autoconfig.rome.category.screenshots": "Знімки Екрана",
+  "text.autoconfig.rome.option.Entry": "Запис",
+  "text.autoconfig.rome.option.Entry.enabled": "Увімкнено",
+  "text.autoconfig.rome.option.Entry.path": "Шлях",
+  "text.autoconfig.rome.option.packs.packs": "Записи",
+  "text.autoconfig.rome.option.saves.saves": "Записи",
+  "text.autoconfig.rome.option.screenshots.screenshots.enabled": "Увімкнено",
+  "text.autoconfig.rome.option.screenshots.screenshots.path": "Шлях",
   "text.autoconfig.rome.title": "Rome"
 }
