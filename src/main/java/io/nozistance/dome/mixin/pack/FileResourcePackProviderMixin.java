@@ -1,6 +1,6 @@
-package io.nozistance.rome.mixin.pack;
+package io.nozistance.dome.mixin.pack;
 
-import io.nozistance.rome.data.pack.PackProvider;
+import io.nozistance.dome.data.pack.PackProvider;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import net.fabricmc.api.EnvType;
@@ -31,7 +31,7 @@ public class FileResourcePackProviderMixin {
             for (Path path : directoryStream) paths.add(path);
             for (Path path : paths) {
                 ResourcePackProfile.PackFactory packFactory = FileResourcePackProvider.getFactory(path, alwaysStable);
-                path = Path.of(path.getFileName().toString() + (PackProvider.isFromMod(path) ? " (Rome)" : " (Local)"));
+                path = Path.of(path.getFileName().toString() + (PackProvider.isFromMod(path) ? " (Dome)" : " (Local)"));
                 if (packFactory != null) consumer.accept(path, packFactory);
             }
         }

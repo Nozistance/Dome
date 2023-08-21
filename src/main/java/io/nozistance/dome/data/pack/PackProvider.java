@@ -1,7 +1,7 @@
-package io.nozistance.rome.data.pack;
+package io.nozistance.dome.data.pack;
 
-import io.nozistance.rome.config.ModData;
-import io.nozistance.rome.config.Entry;
+import io.nozistance.dome.config.ModData;
+import io.nozistance.dome.config.Entry;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import net.fabricmc.api.EnvType;

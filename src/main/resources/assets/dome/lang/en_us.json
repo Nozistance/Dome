@@ -1,0 +1,13 @@
+{
+  "text.autoconfig.dome.category.packs": "Resource/Data Packs",
+  "text.autoconfig.dome.category.saves": "Saves",
+  "text.autoconfig.dome.category.screenshots": "Screenshots",
+  "text.autoconfig.dome.option.Entry": "Entry",
+  "text.autoconfig.dome.option.Entry.enabled": "Enabled",
+  "text.autoconfig.dome.option.Entry.path": "Path",
+  "text.autoconfig.dome.option.packs.packs": "Entries",
+  "text.autoconfig.dome.option.saves.saves": "Entries",
+  "text.autoconfig.dome.option.screenshots.screenshots.enabled": "Enabled",
+  "text.autoconfig.dome.option.screenshots.screenshots.path": "Path",
+  "text.autoconfig.dome.title": "Dome"
+}

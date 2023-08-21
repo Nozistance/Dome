@@ -1,0 +1,13 @@
+{
+  "text.autoconfig.dome.category.packs": "Пакети Ресурсів/Даних",
+  "text.autoconfig.dome.category.saves": "Світи",
+  "text.autoconfig.dome.category.screenshots": "Знімки Екрана",
+  "text.autoconfig.dome.option.Entry": "Запис",
+  "text.autoconfig.dome.option.Entry.enabled": "Увімкнено",
+  "text.autoconfig.dome.option.Entry.path": "Шлях",
+  "text.autoconfig.dome.option.packs.packs": "Записи",
+  "text.autoconfig.dome.option.saves.saves": "Записи",
+  "text.autoconfig.dome.option.screenshots.screenshots.enabled": "Увімкнено",
+  "text.autoconfig.dome.option.screenshots.screenshots.path": "Шлях",
+  "text.autoconfig.dome.title": "Dome"
+}

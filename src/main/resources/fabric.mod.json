@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "rome",
+  "id": "dome",
   "version": "${version}",
-  "name": "Rome",
-  "description": "Resources Outside Minecraft Environment",
+  "name": "Dome",
+  "description": "Data Outside Minecraft Environment",
   "authors": [
     "Nozistance"
   ],
   "contact": {
-    "issues": "https://github.com/Nozistance/Rome/issues",
-    "homepage": "https://modrinth.com/mod/rome",
-    "sources": "https://github.com/Nozistance/Rome"
+    "issues": "https://github.com/Nozistance/Dome/issues",
+    "homepage": "https://modrinth.com/mod/dome",
+    "sources": "https://github.com/Nozistance/Dome"
   },
   "license": "BSD-3-Clause",
-  "icon": "assets/rome/rome.png",
+  "icon": "assets/dome/dome.png",
   "environment": "client",
   "entrypoints": {
     "modmenu": [
-      "io.nozistance.rome.gui.ModMenuIntegration"
+      "io.nozistance.dome.gui.ModMenuIntegration"
     ]
   },
   "mixins": [
-    "rome.mixins.json"
+    "dome.mixins.json"
   ],
   "depends": {
     "minecraft": "*"
