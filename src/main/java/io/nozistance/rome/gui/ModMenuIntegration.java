@@ -2,7 +2,7 @@ package io.nozistance.rome.gui;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import io.nozistance.rome.config.Sources;
+import io.nozistance.rome.config.ModConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -12,7 +12,7 @@ public class ModMenuIntegration implements ModMenuApi {
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> AutoConfig.getConfigScreen(Sources.class, parent).get();
+        return parent -> AutoConfig.getConfigScreen(ModConfig.class, parent).get();
     }
 
 }

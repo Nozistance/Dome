@@ -1,7 +1,7 @@
 package io.nozistance.rome.resource.pack;
 
-import io.nozistance.rome.config.Source;
-import io.nozistance.rome.config.Sources;
+import io.nozistance.rome.config.ModData;
+import io.nozistance.rome.config.Entry;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import net.fabricmc.api.EnvType;
@@ -17,8 +17,8 @@ import java.util.List;
 public class PackProvider {
 
     public static List<Path> getRomeSources() {
-        return Sources.getPacks().stream().filter(Source::isEnabled)
-                .map(Source::getPath).map(Path::of).map(Path::toAbsolutePath)
+        return ModData.getPackEntries().stream().filter(Entry::isEnabled)
+                .map(Entry::getPath).map(Path::of).map(Path::toAbsolutePath)
                 .filter(Files::exists).toList();
     }
 

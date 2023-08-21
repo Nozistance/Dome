@@ -1,0 +1,13 @@
+package io.nozistance.rome.config;
+
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
+
+@Config(name = "screenshots")
+public class ScreenshotsData implements ConfigData {
+
+    @ConfigEntry.Gui.TransitiveObject
+    public final Entry screenshots = new Entry();
+
+}

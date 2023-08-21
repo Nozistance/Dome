@@ -1,7 +1,7 @@
 package io.nozistance.rome.resource.world;
 
-import io.nozistance.rome.config.Source;
-import io.nozistance.rome.config.Sources;
+import io.nozistance.rome.config.ModData;
+import io.nozistance.rome.config.Entry;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,10 +24,10 @@ import java.util.stream.Stream;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class WorldSavesProvider {
 
-    private static final Path SAVES_DIRECTORY = MinecraftClient.getInstance()
-            .getLevelStorage().getSavesDirectory();
+    private static final Path SAVES_DIRECTORY = MinecraftClient
+            .getInstance().getLevelStorage().getSavesDirectory();
 
-    private static final Predicate<LevelSave> isLevelSaveValid =
+    private static final Predicate<LevelSave> isValidLevelSave =
             l -> Files.isRegularFile(l.getLevelDatPath()) ||
                     Files.isRegularFile(l.getLevelDatOldPath());
 
@@ -41,8 +41,8 @@ public class WorldSavesProvider {
     }
 
     public static List<Path> getRomeSources() {
-        return Sources.getWorldSaves().stream().filter(Source::isEnabled)
-                .map(Source::getPath).map(Path::of).map(Path::toAbsolutePath)
+        return ModData.getSaveEntries().stream().filter(Entry::isEnabled)
+                .map(Entry::getPath).map(Path::of).map(Path::toAbsolutePath)
                 .filter(Files::exists).toList();
     }
 
@@ -51,7 +51,7 @@ public class WorldSavesProvider {
         saves.addAll(WorldSavesProvider.getLocalSources());
         saves.addAll(WorldSavesProvider.getRomeSources());
         return saves.stream().map(LevelSave::new)
-                .filter(WorldSavesProvider.isLevelSaveValid)
+                .filter(WorldSavesProvider.isValidLevelSave)
                 .toList();
     }
 
