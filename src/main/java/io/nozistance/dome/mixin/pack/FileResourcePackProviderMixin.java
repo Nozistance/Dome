@@ -1,6 +1,6 @@
-package io.nozistance.rome.mixin.pack;
+package io.nozistance.dome.mixin.pack;
 
-import io.nozistance.rome.data.pack.PackProvider;
+import io.nozistance.dome.data.pack.PackProvider;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import net.fabricmc.api.EnvType;

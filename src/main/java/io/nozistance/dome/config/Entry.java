@@ -1,4 +1,4 @@
-package io.nozistance.rome.config;
+package io.nozistance.dome.config;
 
 import lombok.Getter;
 import net.fabricmc.api.EnvType;

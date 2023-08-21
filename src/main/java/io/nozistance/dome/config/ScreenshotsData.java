@@ -1,4 +1,4 @@
-package io.nozistance.rome.config;
+package io.nozistance.dome.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;

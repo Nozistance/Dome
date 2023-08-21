@@ -1,6 +1,6 @@
-package io.nozistance.rome.mixin.screenshot;
+package io.nozistance.dome.mixin.screenshot;
 
-import io.nozistance.rome.config.ModData;
+import io.nozistance.dome.config.ModData;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import net.fabricmc.api.EnvType;

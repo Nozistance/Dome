@@ -1,8 +1,8 @@
-package io.nozistance.rome.gui;
+package io.nozistance.dome.gui;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import io.nozistance.rome.config.ModConfig;
+import io.nozistance.dome.config.ModConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

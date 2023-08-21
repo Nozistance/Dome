@@ -1,10 +1,10 @@
-package io.nozistance.rome.config;
+package io.nozistance.dome.config;
 
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 
-@Config(name = "rome")
+@Config(name = "dome")
 public class ModConfig extends PartitioningSerializer.GlobalData {
 
     @ConfigEntry.Category("packs")

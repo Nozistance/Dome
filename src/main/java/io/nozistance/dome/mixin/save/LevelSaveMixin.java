@@ -1,4 +1,4 @@
-package io.nozistance.rome.mixin.save;
+package io.nozistance.dome.mixin.save;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
