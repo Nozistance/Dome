@@ -45,7 +45,7 @@ modrinth {
     gameVersions.addAll("${property("minecraft_version")}")
     syncBodyFrom.set(rootProject.file("README.md").readText())
     dependencies {
-        required.version("y0kQixP8") // cloth-config
-        optional.version("RTFDnTKf") // modmenu
+        required.version("s7VTKfLA") // cloth-config
+        optional.version("eTCL1uh8") // modmenu
     }
 }
