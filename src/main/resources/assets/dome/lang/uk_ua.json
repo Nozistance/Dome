@@ -5,9 +5,9 @@
   "text.autoconfig.dome.option.Entry": "Запис",
   "text.autoconfig.dome.option.Entry.enabled": "Увімкнено",
   "text.autoconfig.dome.option.Entry.path": "Шлях",
-  "text.autoconfig.dome.option.packs.packs": "Записи",
-  "text.autoconfig.dome.option.saves.saves": "Записи",
-  "text.autoconfig.dome.option.screenshots.screenshots.enabled": "Увімкнено",
-  "text.autoconfig.dome.option.screenshots.screenshots.path": "Шлях",
+  "text.autoconfig.dome.option.packs.entries": "Записи",
+  "text.autoconfig.dome.option.saves.entries": "Записи",
+  "text.autoconfig.dome.option.screenshots.entry.enabled": "Увімкнено",
+  "text.autoconfig.dome.option.screenshots.entry.path": "Шлях",
   "text.autoconfig.dome.title": "Dome"
 }

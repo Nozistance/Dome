@@ -9,6 +9,5 @@ import java.util.List;
 @Config(name = "saves")
 public class SavesData implements ConfigData {
 
-    public final List<Entry> saves = new ArrayList<>();
-
+    public final List<Entry> entries = new ArrayList<>();
 }

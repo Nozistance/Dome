@@ -15,15 +15,13 @@ import java.nio.file.Path;
 
 @Environment(EnvType.CLIENT)
 @Mixin(LevelStorage.LevelSave.class)
-public class LevelSaveMixin {
+public abstract class LevelSaveMixin {
 
     @Shadow
     private @Final Path path;
 
     @Inject(method = "getRootPath", at = @At("TAIL"), cancellable = true)
     public void getRootPath(@NotNull CallbackInfoReturnable<String> cir) {
-        String fullPath = this.path.toAbsolutePath().toString();
-        cir.setReturnValue(fullPath);
+        cir.setReturnValue(path.toAbsolutePath().toString());
     }
-
 }

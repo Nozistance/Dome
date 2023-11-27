@@ -9,6 +9,5 @@ import java.util.List;
 @Config(name = "packs")
 public class PacksData implements ConfigData {
 
-    public final List<Entry> packs = new ArrayList<>();
-
+    public final List<Entry> entries = new ArrayList<>();
 }
