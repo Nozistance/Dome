@@ -8,6 +8,5 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 public class ScreenshotsData implements ConfigData {
 
     @ConfigEntry.Gui.TransitiveObject
-    public final Entry screenshots = new Entry();
-
+    public final Entry entry = new Entry();
 }

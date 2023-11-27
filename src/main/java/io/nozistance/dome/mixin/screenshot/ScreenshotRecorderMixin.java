@@ -1,5 +1,6 @@
 package io.nozistance.dome.mixin.screenshot;
 
+import io.nozistance.dome.config.Entry;
 import io.nozistance.dome.config.ModData;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -15,13 +16,15 @@ import java.io.File;
 @Environment(EnvType.CLIENT)
 @Mixin(ScreenshotRecorder.class)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class ScreenshotRecorderMixin {
+public abstract class ScreenshotRecorderMixin {
 
     @ModifyVariable(method = "saveScreenshotInner", at = @At("STORE"), ordinal = 1)
     private static File injected(File file) {
-        return ModData.getScreenshotsEntry().isEnabled() ?
-                new File(ModData.getScreenshotsEntry().getPath()) :
-                file;
+        Entry entry = ModData.getScreenshotsEntry();
+        if (entry.isEnabled()) {
+            return new File(entry.getPath());
+        } else {
+            return file;
+        }
     }
-
 }

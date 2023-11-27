@@ -16,15 +16,14 @@ public class ModData {
             .getConfig();
 
     public static List<Entry> getPackEntries() {
-        return DATA.packs.packs;
+        return DATA.packs.entries;
     }
 
     public static List<Entry> getSaveEntries() {
-        return DATA.saves.saves;
+        return DATA.saves.entries;
     }
 
     public static Entry getScreenshotsEntry() {
-        return DATA.screenshots.screenshots;
+        return DATA.screenshots.entry;
     }
-
 }

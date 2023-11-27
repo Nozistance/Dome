@@ -18,5 +18,4 @@ public class ModConfig extends PartitioningSerializer.GlobalData {
     @ConfigEntry.Category("screenshots")
     @ConfigEntry.Gui.TransitiveObject
     ScreenshotsData screenshots = new ScreenshotsData();
-
 }
